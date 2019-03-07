@@ -1,4 +1,4 @@
--- MySQL Script created by Joshua Baesler and Thi Nguyen
+-- DataBase Creation Script created by Joshua Baesler and Thi Nguyen
 -- Tue Mar 5 2019
 -- Model: New Model    Version: 1.0
 
@@ -249,8 +249,10 @@ Inserts data into Invoice Product List Table dependent on type of Product
 INSERT INTO InvoiceProductList (listKey, invoiceKey, productKey, units) VALUES	(1,1,3,5),
 																				(3,2,3,25),
 																				(4,2,2,4),
-                                                                                (8,4,2,1),
+                                                                                (8,4,2,1), 
                                                                                 (11,5,6,25);
+																				
+																			
                                                                                 
 INSERT INTO InvoiceProductList (listKey, invoiceKey, productKey, dates) VALUES	(2,1,1,'2001-01-01:2005-01-01'),
 																				(7,3,5,'2005-01-01:2005-12-31'),
@@ -267,8 +269,17 @@ INSERT INTO Invoice VALUES	(1,'INV001',1,2),
 							(2,'INV002',7,6),
 							(3,'INV003',5,12),
 							(4,'INV004',3,15),
-							(5,'INV005',2,20);
+                            (5,'INV005',2,20);
+							
                             
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+SELECT * FROM Address;
+SELECT * FROM Email;
+SELECT * FROM Person;
+SELECT * FROM Customer;
+SELECT * FROM Product;
+SELECT * FROM Invoice;
+SELECT * FROM InvoiceProductList;
